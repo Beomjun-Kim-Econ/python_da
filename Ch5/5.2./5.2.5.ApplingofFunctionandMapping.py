@@ -46,5 +46,8 @@ applymap 을 이용해서 아래와 같이 수행한다.
 """
 def my_format(x) :
     return f'{x:.2f}'
-print(frame.applymap(my_format))
-
+# print(frame.applymap(my_format))   applymap 은 곧 지원종료... FutureWaring
+"""
+applymap 은 FutureWarning! -> map을 씁시다. map은 각 열로 타겟을 좁힌다.
+"""
+print(frame['e'].map(my_format))
