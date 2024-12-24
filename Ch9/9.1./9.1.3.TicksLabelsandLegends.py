@@ -28,3 +28,21 @@ ticks = ax.set_xticks([0, 250, 500, 750, 1000])
 labels = ax.set_xticklabels(['one', 'two', 'three', 'four', 'five'],
                             rotation = 30, fontsize = 8)
 plt.show()
+
+"""
+Let's add legends by passing the 'label' argument when adding each piece of the plot 
+"""
+fig, ax = plt.subplots()
+ax.plot(np.random.randn(1000).cumsum(), color = 'black', label = 'one')
+ax.plot(np.random.randn(1000).cumsum(), color = 'black', linestyle = 'dashed', label = 'two')
+ax.plot(np.random.randn(1000).cumsum(), color = 'black', linestyle = 'dotted', label = 'three')
+ax.legend()     #adding legend
+plt.show()
+
+"""
+the 'legend' method(.legend) has several other choices for the location 'loc'(location) arguement.
+The 'loc', which is the option for legend, tells matplotlib where to place th plot.
+Its default is 'best', which tries to choose a location that is most out of the way.
+If I want to exclude some elements, then I can achieve it by passing no label, 
+or passing 'label = '_nolegend''.
+"""
