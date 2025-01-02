@@ -42,7 +42,7 @@ print(party_counts)
 party_pcts = party_counts.div(party_counts.sum(axis='columns'),
                               axis = 'index')
 print(party_pcts)
-party_pcts.plot.bar(stacked=True)
+party_pcts.plot.bar(stacked=False)
 plt.show()
 
 """
